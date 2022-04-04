@@ -1,0 +1,20 @@
+{
+  "name": "auto-rename-files",
+  "version": "1.0.0",
+  "description": "An application that can rename more than one file quickly with a choice of various case styles.",
+  "main": "worker.js",
+  "scripts": {
+    "arf": "node worker.js"
+  },
+  "keywords": [
+    "arf"
+  ],
+  "author": "Novandi Ramadhan",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "inquirer": "^8.2.2",
+    "lodash": "^4.17.21",
+    "ora": "^6.1.0"
+  }
+}
