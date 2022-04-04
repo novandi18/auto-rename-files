@@ -1,12 +1,12 @@
 {
   "name": "auto-rename-files",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An application that can rename more than one file quickly with a choice of various case styles.",
   "main": "worker.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "https://github.com/novandi18/auto-rename-files",
+  "repository": "git://github.com/novandi18/auto-rename-files",
   "homepage": "https://github.com/novandi18/auto-rename-files#readme",
   "bin": {
     "autorename": "worker.js"

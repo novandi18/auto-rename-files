@@ -10,7 +10,6 @@ Feel tired when renaming multiple files one by one? calm down, this tool can hel
 - [Example](#example)
   - [Linux](#linux)
   - [Windows](#windows)
-  
 
 ## Style Case
 - Camel Case
@@ -36,4 +35,5 @@ Feel tired when renaming multiple files one by one? calm down, this tool can hel
 #### Linux
 `autorename '/path/to/your/directory/'`
 #### Windows
+`autorename 'C:/path/to/your/directory/'`
 `autorename 'C:/path/to/your/directory/'`
