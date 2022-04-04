@@ -4,11 +4,14 @@
   "description": "An application that can rename more than one file quickly with a choice of various case styles.",
   "main": "worker.js",
   "scripts": {
-    "arf": "node worker.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "arf"
-  ],
+  "repository": "https://github.com/novandi18/auto-rename-files",
+  "homepage": "https://github.com/novandi18/auto-rename-files#readme",
+  "bin": {
+    "autorename": "worker.js"
+  },
+  "keywords": [],
   "author": "Novandi Ramadhan",
   "license": "ISC",
   "type": "module",
