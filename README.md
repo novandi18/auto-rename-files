@@ -36,3 +36,4 @@ Feel tired when renaming multiple files one by one? calm down, this tool can hel
 `autorename '/path/to/your/directory/'`
 #### Windows
 `autorename 'C:/path/to/your/directory/'`
+`autorename 'C:/path/to/your/directory/'`
