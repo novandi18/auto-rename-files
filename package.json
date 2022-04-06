@@ -1,6 +1,6 @@
 {
   "name": "auto-rename-files",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An application that can rename more than one file quickly with a choice of various case styles.",
   "main": "worker.js",
   "scripts": {
