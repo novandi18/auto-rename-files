@@ -1,4 +1,4 @@
-# Auto Rename Files v1.0.3
+# Auto Rename Files v1.0.4
 Feel tired when renaming multiple files one by one? calm down, this tool can help your day become easier and quickly!
 
 ## Table of Contents

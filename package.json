@@ -1,6 +1,6 @@
 {
   "name": "auto-rename-files",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "An application that can rename more than one file quickly with a choice of various case styles.",
   "main": "worker.js",
   "scripts": {
@@ -11,7 +11,9 @@
   "bin": {
     "autorename": "worker.js"
   },
-  "keywords": [],
+  "keywords": [
+    "util"
+  ],
   "author": "Novandi Ramadhan",
   "license": "ISC",
   "type": "module",
