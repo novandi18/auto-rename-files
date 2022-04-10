@@ -1,4 +1,4 @@
-# Auto Rename Files v1.0.2
+# Auto Rename Files v1.0.3
 Feel tired when renaming multiple files one by one? calm down, this tool can help your day become easier and quickly!
 
 ## Table of Contents
@@ -7,7 +7,8 @@ Feel tired when renaming multiple files one by one? calm down, this tool can hel
 - [Installation](#installation)
 - [How to use](#how-to-use)
 - [Arguments](#arguments)
-- [Example](#example)
+- [Style Case Arguments](#style-case-arguments)
+- [Examples](#example)
   - [Linux](#linux)
   - [Windows](#windows)
 
@@ -21,18 +22,31 @@ Feel tired when renaming multiple files one by one? calm down, this tool can hel
 - Upper Case
 
 ## Installation
-`npm i -g auto-rename-files`
+<pre><code>npm i -g auto-rename-files</code></pre>
 
 ## How to use
-`autorename <path>`
+<pre><code>autorename 'path' -case</code></pre>
 
 ## Arguments
-| Name | Type | Description | Default |
-|------|------|-------------|---------|
-| Path | String | Your files path directory | './' |
+| Name | Description | Default |
+|------|-------------|---------|
+| 'path' | Your files path directory | './' |
+| -case  |      Your style case      | null |
+
+## Style Case Arguments
+| Name | Syntax |
+|------|--------|
+| Camel Case | -cc |
+| Dot Case | -dt |
+| Kebab Case | -kc |
+| Lower Case | -lc |
+| Pascal Case | -pc |
+| Snake Case | -sc |
+| Upper Case | -uc |
+
 
 ## Examples
 #### Linux
-`autorename '/path/to/your/directory/'`
+<pre><code>autorename '/path/to/your/directory/' -case</code></pre>
 #### Windows
-`autorename 'C:/path/to/your/directory/'`
+<pre><code>autorename 'C:/path/to/your/directory/' -case</code></pre>

@@ -12,17 +12,30 @@ import { dot } from './case/dotCase.js'
 import { lower } from './case/lowerCase.js'
 
 let path = process.argv.slice(2)[0] === undefined ? "./" : process.argv.slice(2)[0]
+
+let sc_name = process.argv.slice(2)[1]
+let shortcut = sc_name === "-sc" ? "Snake Case" :
+    sc_name === "-cc" ? "Camel Case" :
+    sc_name === "-kc" ? "Kebab Case" :
+    sc_name === "-pc" ? "Pascal Case" :
+    sc_name === "-uc" ? "Upper Case" :
+    sc_name === "-dc" ? "Dot Case" :
+    sc_name === "-lc" ? "Lower Case" :
+    null
+
 let absolute_path = !path.endsWith('/') ? path + '/' : path
 const list = ['Snake Case', 'Camel Case', 'Kebab Case', 'Pascal Case', 'Upper Case', 'Dot Case', 'Lower Case']
 
-async function run(directory) {
+async function run(directory, case_name) {
     const list_files = await read(directory)
-    const { openQuestion } = await inquirer.prompt({
+    const { openQuestion } = case_name !== null ? { openQuestion : case_name } : await inquirer.prompt({
         name: 'openQuestion',
         choices: list,
         message: 'What style case do you want to rename files?',
         type: 'list'
     })
+
+    console.log(list_files)
     
     const spinner = ora("Renaming all files...\n").start()
     await simulateSlowAsyncTask(2000)
@@ -48,7 +61,8 @@ async function run(directory) {
 
 async function read(directory) {
     try {
-        return (await fs.promises.readdir(directory, { withFileTypes: true })).map(dirent => dirent.name)
+        const dirents = await fs.promises.readdir(directory, { withFileTypes: true })
+        return dirents.filter(dirent => dirent.isFile()).map(dirent => dirent.name)
     } catch (error) {
         return error
     }
@@ -60,4 +74,4 @@ async function simulateSlowAsyncTask(ms) {
     })
 }
 
-run(absolute_path)
+run(absolute_path, shortcut)
